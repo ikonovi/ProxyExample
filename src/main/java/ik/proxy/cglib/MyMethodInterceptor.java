@@ -11,7 +11,7 @@ public class MyMethodInterceptor implements MethodInterceptor {
 	@Override
 	public Object intercept(Object enhancedObj, Method method, Object[] args, MethodProxy proxy) throws Throwable {
 		proxy.invokeSuper(enhancedObj, args);
-		Object output = proxy.invoke(new Greeter(" ...CGLib \n"), args);
+		Object output = proxy.invoke(new Greeter(" ... from CGLib \n"), args);
 		return output;
 	}
 }

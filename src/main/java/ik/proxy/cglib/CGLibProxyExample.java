@@ -12,7 +12,6 @@ import net.sf.cglib.proxy.Enhancer;
 public class CGLibProxyExample {
 
 	public static void main(String[] args) {
-
 		Enhancer enhancer = new Enhancer();
 		enhancer.setSuperclass(Greeter.class);
 		enhancer.setCallback(new MyMethodInterceptor());
@@ -22,6 +21,5 @@ public class CGLibProxyExample {
 
 		Greeter proxyGreeter = (Greeter) enhancer.create(argumentTypes, arguments);
 		proxyGreeter.greet();
-
 	}
 }

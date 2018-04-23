@@ -17,7 +17,7 @@ public class MyInvocationHandler implements InvocationHandler {
 	@Override
 	public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
 		method.invoke(origObj, args);		
-		Object output = method.invoke(new Greeter(" ...Java Reflection API\n"), args);		
+		Object output = method.invoke(new Greeter(" ...from Java Reflection API\n"), args);		
 		return output;
 	}
 }
